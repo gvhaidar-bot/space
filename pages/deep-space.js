@@ -57,7 +57,7 @@ if (randomFactBtn && randomFactText) {
 }
 
 var revealTargets = document.querySelectorAll(
-  ".ds-fact-card, .ds-random-box, .ds-hero .feature-card"
+  ".ds-fact-card, .ds-random-box, .ds-gallery-item, .ds-hero .feature-card"
 );
 
 if ("IntersectionObserver" in window) {
