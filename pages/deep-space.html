@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep Space - SPACE Cadet</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Space+Grotesk:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="pages.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="../home.html" class="logo-area">
+        <span class="logo-text"
+          >SPACE Cadet<span class="logo-dot">.</span></span
+        >
+      </a>
+
+      <ul class="nav-capsule">
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../home.html#planets">Planets</a></li>
+        <li><a href="../home.html#galaxy">Galaxy</a></li>
+        <li><a href="../home.html#solar-system">Solar System</a></li>
+        <li><a href="deep-space.html" class="active">Deep Space</a></li>
+        <li><a href="../home.html#facts">Space Facts</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </header>
+
+    <div class="orb-1"></div>
+    <div class="orb-2"></div>
+
+    <div class="container ds-hero">
+      <div class="left-content">
+        <div class="about-me-label">Halaman 05 &bull; Deep Space</div>
+
+        <h1 class="main-heading">Menembus jauh</h1>
+        <h2 class="sub-heading">ke ruang terdalam</h2>
+
+        <p class="description">
+          Deep space adalah wilayah luar angkasa yang sangat jauh, jauh di
+          luar tata surya kita. Di sana tidak ada lagi planet yang kita
+          kenal, yang ada hanyalah nebula raksasa, lubang hitam supermasif,
+          bintang-bintang yang meledak, dan kehampaan yang luasnya hampir
+          tidak masuk akal.
+        </p>
+
+        <p class="description">
+          Cahaya adalah hal tercepat di alam semesta, tetapi bahkan cahaya
+          butuh waktu miliaran tahun untuk menyeberangi deep space. Artinya,
+          setiap kali teleskop melihat ke arah sana, kita sebenarnya sedang
+          melihat masa lalu alam semesta.
+        </p>
+
+        <div class="highlight-box">
+          <p>
+            Alam semesta yang bisa kita amati berdiameter sekitar 93 miliar
+            tahun cahaya, dan sebagian besar isinya masih misteri. Deep space
+            adalah tempat semua pertanyaan terbesar itu bersembunyi.
+          </p>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3 class="ds-stat-number">13,8 M</h3>
+            <p class="feature-title">Tahun</p>
+            <p class="feature-desc">
+              Perkiraan usia alam semesta, dihitung dari sisa cahaya Big
+              Bang yang masih bisa dideteksi sampai hari ini.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="ds-stat-number">93 M</h3>
+            <p class="feature-title">Tahun Cahaya</p>
+            <p class="feature-desc">
+              Diameter alam semesta teramati, jauh lebih besar dari usianya
+              karena ruang itu sendiri terus mengembang.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="ds-stat-number">2 Triliun</h3>
+            <p class="feature-title">Galaksi</p>
+            <p class="feature-desc">
+              Perkiraan jumlah galaksi di alam semesta teramati, dan Bima
+              Sakti hanyalah satu di antaranya.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="ds-stat-number">24 M+ km</h3>
+            <p class="feature-title">Voyager 1</p>
+            <p class="feature-desc">
+              Jarak wahana buatan manusia terjauh dari Bumi. Sinyal radionya
+              saja butuh waktu lebih dari 22 jam untuk sampai ke kita.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ds-section">
+      <div class="ds-section-head">
+        <div class="about-me-label">Fakta-Fakta Deep Space</div>
+        <h2 class="ds-section-title">
+          Hal menakjubkan di <span class="ds-italic">ruang terdalam</span>
+        </h2>
+        <p class="description ds-section-desc">
+          Gunakan tombol filter untuk melihat fakta berdasarkan kategorinya.
+        </p>
+
+        <div class="ds-filter" role="group" aria-label="Filter kategori fakta">
+          <button class="ds-filter-btn active" data-filter="semua">Semua</button>
+          <button class="ds-filter-btn" data-filter="nebula">Nebula</button>
+          <button class="ds-filter-btn" data-filter="lubang-hitam">
+            Lubang Hitam
+          </button>
+          <button class="ds-filter-btn" data-filter="eksoplanet">
+            Eksoplanet
+          </button>
+          <button class="ds-filter-btn" data-filter="fenomena">Fenomena</button>
+        </div>
+      </div>
+
+      <div class="ds-facts-grid" id="factsGrid">
+        <article class="feature-card ds-fact-card" data-category="nebula">
+          <span class="ds-card-tag">Nebula</span>
+          <h3 class="feature-title">Pilar Penciptaan, Pabrik Bintang</h3>
+          <p class="feature-desc">
+            Di Nebula Elang, sekitar 6.500 tahun cahaya dari Bumi, ada menara
+            gas dan debu raksasa yang dijuluki Pilar Penciptaan. Di dalamnya,
+            bintang-bintang baru sedang lahir. Foto ikoniknya diambil
+            Teleskop Hubble pada 1995 dan versi lebih tajamnya oleh James
+            Webb pada 2022.
+          </p>
+        </article>
+
+        <article class="feature-card ds-fact-card" data-category="lubang-hitam">
+          <span class="ds-card-tag">Lubang Hitam</span>
+          <h3 class="feature-title">Monster di Pusat Galaksi Kita</h3>
+          <p class="feature-desc">
+            Di pusat Bima Sakti bersembunyi Sagittarius A*, lubang hitam
+            supermasif bermassa sekitar 4,3 juta kali massa Matahari. Yang
+            terbesar yang pernah ditemukan, TON 618, massanya mencapai
+            sekitar 66 miliar kali massa Matahari, sangat besar sampai
+            seluruh tata surya kita terlihat kecil di dekatnya.
+          </p>
+        </article>
+
+        <article class="feature-card ds-fact-card" data-category="eksoplanet">
+          <span class="ds-card-tag">Eksoplanet</span>
+          <h3 class="feature-title">Tetangga Terdekat di Luar Tata Surya</h3>
+          <p class="feature-desc">
+            Proxima Centauri b adalah eksoplanet terdekat dari Bumi, jaraknya
+            hanya sekitar 4,24 tahun cahaya. Planet ini berada di zona layak
+            huni bintangnya, artinya suhunya memungkinkan air cair ada di
+            permukaannya. Sampai sekarang, ilmuwan sudah mengonfirmasi lebih
+            dari 5.500 eksoplanet.
+          </p>
+        </article>
+
+        <article class="feature-card ds-fact-card" data-category="fenomena">
+          <span class="ds-card-tag">Fenomena</span>
+          <h3 class="feature-title">Bintang Neutron, Benda Terpadat</h3>
+          <p class="feature-desc">
+            Bintang neutron adalah sisa inti bintang besar yang runtuh.
+            Ukurannya hanya sekitar 20 km, tetapi satu sendok teh materinya
+            beratnya bisa mencapai miliaran ton. Sebagian berputar ratusan
+            kali per detik dan memancarkan gelombang radio seperti mercusuar
+            kosmik, disebut pulsar.
+          </p>
+        </article>
+
+        <article class="feature-card ds-fact-card" data-category="fenomena">
+          <span class="ds-card-tag">Fenomena</span>
+          <h3 class="feature-title">95% Alam Semesta Masih Misteri</h3>
+          <p class="feature-desc">
+            Semua bintang, planet, dan benda yang bisa kita lihat hanya
+            sekitar 5% dari isi alam semesta. Sisanya adalah materi gelap
+            (sekitar 27%) yang tidak memancarkan cahaya, dan energi gelap
+            (sekitar 68%) yang membuat alam semesta mengembang makin cepat.
+            Keduanya belum benar-benar dipahami ilmuwan.
+          </p>
+        </article>
+
+        <article class="feature-card ds-fact-card" data-category="fenomena">
+          <span class="ds-card-tag">Fenomena</span>
+          <h3 class="feature-title">Bo&ouml;tes Void, Kehampaan Raksasa</h3>
+          <p class="feature-desc">
+            Bo&ouml;tes Void adalah wilayah hampir kosong berdiameter
+            sekitar 330 juta tahun cahaya. Di ruang sebesar itu normalnya
+            ada ribuan galaksi, tetapi di sana hanya ditemukan beberapa
+            puluh saja. Ini adalah salah satu kehampaan terbesar yang pernah
+            diketahui manusia.
+          </p>
+        </article>
+      </div>
+
+      <p class="ds-empty" id="factsEmpty" hidden>
+        Belum ada fakta pada kategori ini.
+      </p>
+    </section>
+
+    <section class="ds-section ds-random-section">
+      <div class="highlight-box ds-random-box">
+        <div class="about-me-label">Tahukah Kamu?</div>
+        <p class="ds-random-text" id="randomFactText">
+          Klik tombol di bawah untuk menampilkan fakta deep space secara
+          acak.
+        </p>
+        <button class="ds-random-btn" id="randomFactBtn" type="button">
+          Tampilkan Fakta Acak
+        </button>
+      </div>
+    </section>
+
+    <footer class="space-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-text"
+            >SPACE Cadet<span class="logo-dot">.</span></span
+          >
+        </div>
+        <p class="footer-desc">
+          Mendukung penjelajah luar angkasa dengan teknologi kosmik tingkat
+          lanjut. Wujudkan ide antariksamu menjadi nyata.
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <a href="#">SPACE Cadet</a> ©2026. All rights reserved. By Haidar Ali
+          Yahya Umar Dani
+        </div>
+      </div>
+    </footer>
+
+    <script src="deep-space.js"></script>
+  </body>
+</html>
