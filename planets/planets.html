@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planets - SPACE Cadet</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Space+Grotesk:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="planets.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="../home/home.html" class="logo-area">
+        <span class="logo-text"
+          >SPACE Cadet<span class="logo-dot">.</span></span
+        >
+      </a>
+
+      <ul class="nav-capsule">
+        <li><a href="../home/home.html">Home</a></li>
+        <li><a href="planets.html" class="active">Planets</a></li>
+        <li><a href="../galaxy/galaxy.html">Galaxy</a></li>
+        <li><a href="../deep-space/deep-space.html">Deep Space</a></li>
+        <li><a href="../about/about.html">About Us</a></li>
+      </ul>
+    </header>
+
+    <div class="orb-1"></div>
+    <div class="orb-2"></div>
+
+    <div class="pl-bg-container">
+      <img
+        src="../images/starfield-bg.jpg"
+        alt=""
+        class="pl-bg-image"
+        aria-hidden="true"
+      />
+    </div>
+
+    <div class="container pl-hero">
+      <div class="left-content">
+        <div class="about-me-label">Halaman 02 &bull; Planets</div>
+
+        <h1 class="main-heading">Delapan dunia</h1>
+        <h2 class="sub-heading">dalam satu tata surya</h2>
+
+        <p class="description">
+          Tata surya kita punya delapan planet, dan tidak ada dua yang sama.
+          Ada yang kecil dan berbatu seperti Merkurius, ada yang raksasa gas
+          seperti Jupiter, sampai yang dingin dan jauh seperti Neptunus.
+          Semuanya mengorbit satu bintang yang sama, Matahari.
+        </p>
+
+        <p class="description">
+          Empat planet pertama berbatu dan padat, empat sisanya raksasa yang
+          sebagian besar isinya gas dan es. Urutan ini bukan kebetulan: dekat
+          Matahari terlalu panas untuk gas berkumpul, jadi planet dalam
+          terbentuk dari batu dan logam.
+        </p>
+
+        <div class="highlight-box">
+          <p>
+            Sejak 2006, Pluto tidak lagi dihitung sebagai planet, melainkan
+            planet katai. Jadi jumlah planet resmi di tata surya kita adalah
+            delapan, dan semuanya ada di halaman ini.
+          </p>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3 class="pl-stat-number">8</h3>
+            <p class="feature-title">Planet</p>
+            <p class="feature-desc">
+              Jumlah planet resmi di tata surya, empat berbatu dan empat
+              raksasa.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="pl-stat-number">4,6 M</h3>
+            <p class="feature-title">Tahun</p>
+            <p class="feature-desc">
+              Perkiraan usia tata surya, dihitung dari batuan tertua yang
+              pernah ditemukan.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="pl-stat-number">288</h3>
+            <p class="feature-title">Bulan</p>
+            <p class="feature-desc">
+              Total bulan yang mengorbit delapan planet, paling banyak
+              dimiliki Saturnus dengan 146 bulan.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="pl-stat-number">99,86%</h3>
+            <p class="feature-title">Massa Matahari</p>
+            <p class="feature-desc">
+              Bagian massa seluruh tata surya yang ada di Matahari. Semua
+              planet digabung hanya 0,14%.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="pl-section">
+      <div class="pl-section-head">
+        <div class="about-me-label">Jelajahi Planet</div>
+        <h2 class="pl-section-title">
+          Kenali <span class="pl-italic">delapan planet</span> kita
+        </h2>
+        <p class="description pl-section-desc">
+          Gunakan tombol filter untuk melihat planet berdasarkan jenisnya, lalu
+          klik salah satu kartu untuk melihat detailnya.
+        </p>
+
+        <div class="pl-filter" role="group" aria-label="Filter jenis planet">
+          <button class="pl-filter-btn active" data-filter="semua">Semua</button>
+          <button class="pl-filter-btn" data-filter="berbatu">Berbatu</button>
+          <button class="pl-filter-btn" data-filter="raksasa-gas">Raksasa Gas</button>
+          <button class="pl-filter-btn" data-filter="raksasa-es">Raksasa Es</button>
+        </div>
+      </div>
+
+      <div class="pl-planets-grid" id="planetsGrid">
+        <article class="feature-card pl-planet-card" data-category="berbatu" data-planet="merkurius" tabindex="0">
+          <span class="pl-card-tag">Berbatu</span>
+          <h3 class="feature-title">Merkurius</h3>
+          <p class="feature-desc">
+            Planet terkecil dan terdekat dari Matahari. Permukaannya penuh
+            kawah seperti Bulan dan hampir tanpa atmosfer.
+          </p>
+          <p class="pl-card-data">4.879 km &bull; 57,9 jt km dari Matahari</p>
+        </article>
+
+        <article class="feature-card pl-planet-card" data-category="berbatu" data-planet="venus" tabindex="0">
+          <span class="pl-card-tag">Berbatu</span>
+          <h3 class="feature-title">Venus</h3>
+          <p class="feature-desc">
+            Planet terpanas di tata surya, diselimuti awan tebal yang
+            memerangkap panas. Berputar terbalik dari planet lainnya.
+          </p>
+          <p class="pl-card-data">12.104 km &bull; 108,2 jt km dari Matahari</p>
+        </article>
+
+        <article class="feature-card pl-planet-card" data-category="berbatu" data-planet="bumi" tabindex="0">
+          <span class="pl-card-tag">Berbatu</span>
+          <h3 class="feature-title">Bumi</h3>
+          <p class="feature-desc">
+            Satu-satunya planet yang diketahui memiliki kehidupan, dengan air
+            cair dan oksigen di atmosfernya.
+          </p>
+          <p class="pl-card-data">12.742 km &bull; 149,6 jt km dari Matahari</p>
+        </article>
+
+        <article class="feature-card pl-planet-card" data-category="berbatu" data-planet="mars" tabindex="0">
+          <span class="pl-card-tag">Berbatu</span>
+          <h3 class="feature-title">Mars</h3>
+          <p class="feature-desc">
+            Planet merah dengan gunung tertinggi di tata surya, Olympus Mons,
+            dan jejak air di masa lalunya.
+          </p>
+          <p class="pl-card-data">6.779 km &bull; 227,9 jt km dari Matahari</p>
+        </article>
+
+        <article class="feature-card pl-planet-card" data-category="raksasa-gas" data-planet="jupiter" tabindex="0">
+          <span class="pl-card-tag">Raksasa Gas</span>
+          <h3 class="feature-title">Jupiter</h3>
+          <p class="feature-desc">
+            Planet terbesar, massanya lebih besar dari semua planet lain
+            digabung. Badai Bintik Merah Besarnya sudah berumur ratusan tahun.
+          </p>
+          <p class="pl-card-data">139.820 km &bull; 778,5 jt km dari Matahari</p>
+        </article>
+
+        <article class="feature-card pl-planet-card" data-category="raksasa-gas" data-planet="saturnus" tabindex="0">
+          <span class="pl-card-tag">Raksasa Gas</span>
+          <h3 class="feature-title">Saturnus</h3>
+          <p class="feature-desc">
+            Terkenal dengan cincinnya yang lebar dari es dan batu. Planet
+            paling ringan, kurang padat dari air.
+          </p>
+          <p class="pl-card-data">116.460 km &bull; 1,43 miliar km dari Matahari</p>
+        </article>
+
+        <article class="feature-card pl-planet-card" data-category="raksasa-es" data-planet="uranus" tabindex="0">
+          <span class="pl-card-tag">Raksasa Es</span>
+          <h3 class="feature-title">Uranus</h3>
+          <p class="feature-desc">
+            Berputar miring hampir 98 derajat, seperti menggelinding di
+            orbitnya. Atmosfer metananya membuatnya biru kehijauan.
+          </p>
+          <p class="pl-card-data">50.724 km &bull; 2,87 miliar km dari Matahari</p>
+        </article>
+
+        <article class="feature-card pl-planet-card" data-category="raksasa-es" data-planet="neptunus" tabindex="0">
+          <span class="pl-card-tag">Raksasa Es</span>
+          <h3 class="feature-title">Neptunus</h3>
+          <p class="feature-desc">
+            Planet terjauh, dengan angin tercepat di tata surya sampai 2.100
+            km per jam.
+          </p>
+          <p class="pl-card-data">49.244 km &bull; 4,50 miliar km dari Matahari</p>
+        </article>
+      </div>
+
+      <p class="pl-empty" id="planetsEmpty" hidden>
+        Belum ada planet pada kategori ini.
+      </p>
+
+      <div class="highlight-box pl-detail-box" id="planetDetail">
+        <div class="about-me-label">Detail Planet</div>
+        <h3 class="pl-detail-name" id="planetDetailName">Pilih sebuah planet</h3>
+        <p class="pl-detail-text" id="planetDetailText">
+          Klik salah satu kartu planet di atas untuk melihat diameter, jarak,
+          lama satu tahun, dan jumlah bulannya.
+        </p>
+        <p class="pl-detail-data" id="planetDetailData"></p>
+      </div>
+    </section>
+
+    <section class="pl-section pl-random-section">
+      <div class="highlight-box pl-random-box">
+        <div class="about-me-label">Tahukah Kamu?</div>
+        <p class="pl-random-text" id="randomFactText">
+          Klik tombol di bawah untuk menampilkan fakta planet secara acak.
+        </p>
+        <button class="pl-random-btn" id="randomFactBtn" type="button">
+          Tampilkan Fakta Acak
+        </button>
+      </div>
+    </section>
+
+    <footer class="space-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-text"
+            >SPACE Cadet<span class="logo-dot">.</span></span
+          >
+        </div>
+        <p class="footer-desc">
+          Mendukung penjelajah luar angkasa dengan teknologi kosmik tingkat
+          lanjut. Wujudkan ide antariksamu menjadi nyata.
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <a href="#">SPACE Cadet</a> ©2026. All rights reserved. By Haidar Ali
+          Yahya Umar Dani
+        </div>
+      </div>
+    </footer>
+
+    <script src="planets.js"></script>
+  </body>
+</html>

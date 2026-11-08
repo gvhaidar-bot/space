@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaxy - SPACE Cadet</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Space+Grotesk:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="galaxy.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="../home/home.html" class="logo-area">
+        <span class="logo-text"
+          >SPACE Cadet<span class="logo-dot">.</span></span
+        >
+      </a>
+
+      <ul class="nav-capsule">
+        <li><a href="../home/home.html">Home</a></li>
+        <li><a href="../planets/planets.html">Planets</a></li>
+        <li><a href="galaxy.html" class="active">Galaxy</a></li>
+        <li><a href="../deep-space/deep-space.html">Deep Space</a></li>
+        <li><a href="../about/about.html">About Us</a></li>
+      </ul>
+    </header>
+
+    <div class="orb-1"></div>
+    <div class="orb-2"></div>
+
+    <div class="gx-bg-container">
+      <img
+        src="../images/starfield-bg.jpg"
+        alt=""
+        class="gx-bg-image"
+        aria-hidden="true"
+      />
+    </div>
+
+    <div class="container gx-hero">
+      <div class="left-content">
+        <div class="about-me-label">Halaman 03 &bull; Galaxy</div>
+
+        <h1 class="main-heading">Kota-kota bintang</h1>
+        <h2 class="sub-heading">di alam semesta</h2>
+
+        <p class="description">
+          Galaksi adalah kumpulan raksasa berisi miliaran bintang, gas, debu,
+          dan materi gelap yang diikat gravitasi. Matahari kita hanyalah satu
+          bintang dari ratusan miliar bintang di galaksi Bima Sakti.
+        </p>
+
+        <p class="description">
+          Galaksi punya tiga bentuk utama: spiral dengan lengan melengkung,
+          elips yang bulat dan padat, serta tak beraturan yang bentuknya tidak
+          berpola. Bentuknya bercerita tentang sejarah dan tabrakan yang pernah
+          dialami galaksi itu.
+        </p>
+
+        <div class="highlight-box">
+          <p>
+            Galaksi terjauh yang pernah teramati cahayanya sudah berjalan lebih
+            dari 13 miliar tahun sebelum sampai ke teleskop kita. Melihat
+            galaksi jauh artinya melihat alam semesta saat masih sangat muda.
+          </p>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3 class="gx-stat-number">2 Triliun</h3>
+            <p class="feature-title">Galaksi</p>
+            <p class="feature-desc">
+              Perkiraan jumlah galaksi di alam semesta teramati, dan Bima
+              Sakti hanyalah satu di antaranya.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="gx-stat-number">100&ndash;400 M</h3>
+            <p class="feature-title">Bintang</p>
+            <p class="feature-desc">
+              Perkiraan jumlah bintang di galaksi Bima Sakti, rumah tata surya
+              kita.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="gx-stat-number">100.000</h3>
+            <p class="feature-title">Tahun Cahaya</p>
+            <p class="feature-desc">
+              Diameter galaksi Bima Sakti. Cahaya butuh 100.000 tahun untuk
+              menyeberanginya.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="gx-stat-number">2,5 Jt</h3>
+            <p class="feature-title">Tahun Cahaya</p>
+            <p class="feature-desc">
+              Jarak galaksi Andromeda, tetangga spiral besar terdekat dari
+              Bima Sakti.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="gx-section">
+      <div class="gx-section-head">
+        <div class="about-me-label">Jelajahi Galaksi</div>
+        <h2 class="gx-section-title">
+          Enam galaksi <span class="gx-italic">yang wajib dikenal</span>
+        </h2>
+        <p class="description gx-section-desc">
+          Gunakan tombol filter untuk melihat galaksi berdasarkan bentuknya.
+        </p>
+
+        <div class="gx-filter" role="group" aria-label="Filter bentuk galaksi">
+          <button class="gx-filter-btn active" data-filter="semua">Semua</button>
+          <button class="gx-filter-btn" data-filter="spiral">Spiral</button>
+          <button class="gx-filter-btn" data-filter="elips">Elips</button>
+          <button class="gx-filter-btn" data-filter="tak-beraturan">Tak Beraturan</button>
+        </div>
+      </div>
+
+      <div class="gx-galaxies-grid" id="galaxiesGrid">
+        <article class="feature-card gx-galaxy-card" data-category="spiral">
+          <span class="gx-card-tag">Spiral</span>
+          <h3 class="feature-title">Bima Sakti</h3>
+          <p class="feature-desc">
+            Galaksi rumah kita. Matahari berada di salah satu lengan
+            spiralnya, sekitar 26.000 tahun cahaya dari pusat galaksi, tempat
+            bersembunyinya lubang hitam Sagittarius A*.
+          </p>
+          <p class="gx-card-data">~100.000 th cahaya &bull; 100&ndash;400 miliar bintang</p>
+        </article>
+
+        <article class="feature-card gx-galaxy-card" data-category="spiral">
+          <span class="gx-card-tag">Spiral</span>
+          <h3 class="feature-title">Andromeda (M31)</h3>
+          <p class="feature-desc">
+            Tetangga spiral terbesar kita dan galaksi besar terdekat dari Bima
+            Sakti. Suatu hari akan menyatu dengan galaksi kita.
+          </p>
+          <p class="gx-card-data">2,5 jt th cahaya &bull; ~1 triliun bintang</p>
+        </article>
+
+        <article class="feature-card gx-galaxy-card" data-category="spiral">
+          <span class="gx-card-tag">Spiral</span>
+          <h3 class="feature-title">Triangulum (M33)</h3>
+          <p class="feature-desc">
+            Anggota Grup Lokal yang lebih kecil dari Andromeda, tapi masih
+            berisi puluhan miliar bintang dan wilayah pembentuk bintang yang
+            aktif.
+          </p>
+          <p class="gx-card-data">2,7 jt th cahaya &bull; ~40 miliar bintang</p>
+        </article>
+
+        <article class="feature-card gx-galaxy-card" data-category="spiral">
+          <span class="gx-card-tag">Spiral</span>
+          <h3 class="feature-title">Sombrero (M104)</h3>
+          <p class="feature-desc">
+            Dinamai dari bentuknya yang mirip topi sombrero, dengan cincin
+            debu gelap yang lebar dan tonjolan pusat yang terang.
+          </p>
+          <p class="gx-card-data">29 jt th cahaya &bull; lubang hitam pusat ~1 miliar massa Matahari</p>
+        </article>
+
+        <article class="feature-card gx-galaxy-card" data-category="elips">
+          <span class="gx-card-tag">Elips</span>
+          <h3 class="feature-title">Messier 87 (M87)</h3>
+          <p class="feature-desc">
+            Galaksi elips raksasa di pusat gugus Virgo. Di pusatnya ada lubang
+            hitam supermasif pertama yang berhasil difoto manusia, M87*.
+          </p>
+          <p class="gx-card-data">55 jt th cahaya &bull; lubang hitam 6,5 miliar massa Matahari</p>
+        </article>
+
+        <article class="feature-card gx-galaxy-card" data-category="tak-beraturan">
+          <span class="gx-card-tag">Tak Beraturan</span>
+          <h3 class="feature-title">Awan Magellan Besar</h3>
+          <p class="feature-desc">
+            Galaksi satelit Bima Sakti yang bentuknya tidak berpola. Hanya
+            terlihat jelas dari belahan bumi selatan.
+          </p>
+          <p class="gx-card-data">160.000 th cahaya &bull; ~30 miliar bintang</p>
+        </article>
+      </div>
+
+      <p class="gx-empty" id="galaxiesEmpty" hidden>
+        Belum ada galaksi pada kategori ini.
+      </p>
+    </section>
+
+    <section class="gx-section gx-random-section">
+      <div class="highlight-box gx-random-box">
+        <div class="about-me-label">Tahukah Kamu?</div>
+        <p class="gx-random-text" id="randomFactText">
+          Klik tombol di bawah untuk menampilkan fakta galaksi secara acak.
+        </p>
+        <button class="gx-random-btn" id="randomFactBtn" type="button">
+          Tampilkan Fakta Acak
+        </button>
+      </div>
+    </section>
+
+    <footer class="space-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-text"
+            >SPACE Cadet<span class="logo-dot">.</span></span
+          >
+        </div>
+        <p class="footer-desc">
+          Mendukung penjelajah luar angkasa dengan teknologi kosmik tingkat
+          lanjut. Wujudkan ide antariksamu menjadi nyata.
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <a href="#">SPACE Cadet</a> ©2026. All rights reserved. By Haidar Ali
+          Yahya Umar Dani
+        </div>
+      </div>
+    </footer>
+
+    <script src="galaxy.js"></script>
+  </body>
+</html>
