@@ -1,31 +1,49 @@
+// ambil semua tombol filter di halaman planets
 var filterButtons = document.querySelectorAll(".pl-filter-btn");
+// ambil semua kartu planetnya
 var planetCards = document.querySelectorAll(".pl-planet-card");
+// ambil teks yang muncul kalau tidak ada planet di kategori itu
 var planetsEmpty = document.getElementById("planetsEmpty");
 
+// kasih fungsi klik ke tiap tombol filter
 filterButtons.forEach(function (button) {
+  // kalau tombolnya diklik
   button.addEventListener("click", function () {
+    // hapus dulu class active dari semua tombol
     filterButtons.forEach(function (btn) {
       btn.classList.remove("active");
     });
+    // terus kasih class active ke tombol yang baru diklik
     button.classList.add("active");
 
+    // baca kategori dari tombolnya, misal berbatu atau semua
     var filter = button.getAttribute("data-filter");
+    // buat ngitung ada berapa kartu yang kelihatan
     var visibleCount = 0;
 
+    // cek satu-satu kartu planetnya
     planetCards.forEach(function (card) {
+      // ambil kategori kartu ini dari atributnya
       var category = card.getAttribute("data-category");
+      // kartunya ditampilin kalau filternya semua, atau kategorinya sama
       var show = filter === "semua" || category === filter;
+      // kalau show benar kartunya muncul, kalau salah disembunyiin
       card.style.display = show ? "" : "none";
+      // kalau muncul, hitungannya nambah satu
       if (show) visibleCount++;
     });
 
+    // kalau ada teks kosongnya, atur muncul atau tidak
     if (planetsEmpty) {
+      // teks kosong cuma muncul kalau tidak ada kartu yang kelihatan
       planetsEmpty.hidden = visibleCount !== 0;
     }
   });
 });
 
+// data lengkap tiap planet, nanti dipakai buat kotak detail
 var planetDetails = {
+  // kunci merkurius, isinya nama, penjelasan, sama datanya
   merkurius: {
     name: "Merkurius",
     text: "Planet terkecil di tata surya dan yang paling dekat dengan Matahari. Satu tahun di sana hanya 88 hari, tetapi suhunya berubah ekstrem antara siang dan malam.",
@@ -68,35 +86,53 @@ var planetDetails = {
   }
 };
 
+// ambil tiga bagian di kotak detail: nama, penjelasan, sama baris datanya
 var detailName = document.getElementById("planetDetailName");
 var detailText = document.getElementById("planetDetailText");
 var detailData = document.getElementById("planetDetailData");
 
+// fungsi buat nampilin detail planet yang dipilih ke kotak detail
 function showPlanet(key) {
+  // cari datanya dari planetDetails pakai kunci, misal bumi
   var planet = planetDetails[key];
+  // kalau datanya tidak ada atau elemennya tidak ada, langsung berhenti
   if (!planet || !detailName || !detailText || !detailData) return;
+  // isi nama planetnya
   detailName.textContent = planet.name;
+  // isi penjelasannya
   detailText.textContent = planet.text;
+  // isi baris datanya
   detailData.textContent = planet.data;
 }
 
+// kasih fungsi klik ke tiap kartu planet
 planetCards.forEach(function (card) {
+  // fungsi yang jalan kalau kartunya dipilih
   function select() {
+    // hapus dulu tanda aktif dari semua kartu
     planetCards.forEach(function (other) {
       other.classList.remove("active");
     });
+    // kasih tanda aktif ke kartu yang diklik
     card.classList.add("active");
+    // tampilin detail planet ini di kotak detail
     showPlanet(card.getAttribute("data-planet"));
   }
+  // kalau kartunya diklik mouse, jalanin select
   card.addEventListener("click", select);
+  // biar kartunya juga bisa dipilih pakai keyboard
   card.addEventListener("keydown", function (event) {
+    // kalau tombol yang ditekan Enter atau spasi
     if (event.key === "Enter" || event.key === " ") {
+      // cegah halaman ikut ke-scroll gara-gara spasi
       event.preventDefault();
+      // jalanin select seperti kalau diklik
       select();
     }
   });
 });
 
+// daftar fakta planet buat tombol acak
 var randomFacts = [
   "Satu hari di Venus (243 hari Bumi) lebih panjang daripada satu tahunnya (225 hari Bumi).",
   "Jupiter begitu besar sampai 1.300 planet seukuran Bumi bisa muat di dalamnya.",
@@ -108,19 +144,28 @@ var randomFacts = [
   "Bumi adalah satu-satunya planet yang tidak dinamai dari dewa, dan satu-satunya yang diketahui memiliki kehidupan."
 ];
 
+// ambil tombol sama teks buat fakta acak
 var randomFactBtn = document.getElementById("randomFactBtn");
 var randomFactText = document.getElementById("randomFactText");
+// buat nyimpan fakta terakhir, biar tidak muncul dua kali berturut-turut
 var lastFactIndex = -1;
 
+// cek dulu tombol sama teksnya ada, baru kasih fungsi klik
 if (randomFactBtn && randomFactText) {
+  // kalau tombolnya diklik
   randomFactBtn.addEventListener("click", function () {
+    // buat nyimpan nomor fakta yang dipilih
     var index;
+    // acak terus sampai dapat yang beda dari terakhir
     do {
       index = Math.floor(Math.random() * randomFacts.length);
     } while (index === lastFactIndex && randomFacts.length > 1);
+    // simpan nomor ini jadi yang terakhir
     lastFactIndex = index;
 
+    // sembunyiin dulu teksnya biar ada efek pudar
     randomFactText.style.opacity = "0";
+    // tunggu 180 mili detik, baru ganti teksnya terus munculin lagi
     setTimeout(function () {
       randomFactText.textContent = randomFacts[index];
       randomFactText.style.opacity = "1";
@@ -128,27 +173,38 @@ if (randomFactBtn && randomFactText) {
   });
 }
 
+// ambil semua elemen yang mau dikasih animasi muncul saat scroll
 var revealTargets = document.querySelectorAll(
   ".pl-planet-card, .pl-detail-box, .pl-random-box, .pl-hero .feature-card"
 );
 
+// cek dulu browser-nya dukung IntersectionObserver atau tidak
 if ("IntersectionObserver" in window) {
+  // tiap elemen dikasih class reveal dulu, jadi awalnya sembunyi
   revealTargets.forEach(function (el) {
     el.classList.add("reveal");
   });
 
+  // bikin pengamat yang mantau kapan elemen masuk ke layar
   var observer = new IntersectionObserver(
+    // ini jalan tiap ada elemen yang masuk atau keluar layar
     function (entries) {
+      // cek satu-satu elemennya
       entries.forEach(function (entry) {
+        // kalau elemennya sudah kelihatan di layar
         if (entry.isIntersecting) {
+          // munculin elemennya dengan nambah class reveal-visible
           entry.target.classList.add("reveal-visible");
+          // habis itu berhenti mantau elemen ini, biar tidak diulang
           observer.unobserve(entry.target);
         }
       });
     },
+    // animasi jalan kalau elemennya sudah kelihatan 12 persen
     { threshold: 0.12 }
   );
 
+  // daftarin semua elemen tadi biar dipantau sama observer
   revealTargets.forEach(function (el) {
     observer.observe(el);
   });
