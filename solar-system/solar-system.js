@@ -1,23 +1,22 @@
 // ambil kotak video yang awalnya cuma gambar sama tombol putar
 var videoFacade = document.getElementById("videoFacade");
 
-// fungsi buat ganti kotak video jadi video youtube beneran
+// fungsi buat ganti kotak video jadi pemutar video beneran
 function playVideo() {
   // kalau kotak videonya tidak ada, langsung berhenti
   if (!videoFacade) return;
-  // bikin elemen iframe baru
-  var iframe = document.createElement("iframe");
-  // isi alamat videonya, pakai yang youtube-nocookie biar lebih ringan
-  iframe.src = "https://www.youtube-nocookie.com/embed/libKVRa01L8?autoplay=1&rel=0";
-  // kasih judul biar jelas video apa ini
-  iframe.title = "Solar System 101 - National Geographic";
-  // izinin video diputar otomatis sama dibuka fullscreen
-  iframe.allow = "autoplay; encrypted-media; picture-in-picture";
-  iframe.allowFullscreen = true;
+  // bikin elemen video baru
+  var video = document.createElement("video");
+  // ambil file videonya dari folder video di halaman ini
+  video.src = "video/solar-system-explained.webm";
+  // kasih tombol kontrol kayak play, pause, sama fullscreen
+  video.controls = true;
+  // langsung putar begitu videonya muncul
+  video.autoplay = true;
   // kosongin isi kotak video, buang gambar sama tombol putarnya
   videoFacade.innerHTML = "";
-  // masukin iframe-nya ke kotak video
-  videoFacade.appendChild(iframe);
+  // masukin videonya ke kotak video
+  videoFacade.appendChild(video);
   // matiin fungsi kliknya, soalnya videonya sudah jalan
   videoFacade.removeEventListener("click", playVideo);
 }

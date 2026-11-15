@@ -29,7 +29,8 @@ space/
 ├── solar-system/
 │   ├── solar-system.html → video + grid isi tata surya + link-link
 │   ├── solar-system.css
-│   └── solar-system.js
+│   ├── solar-system.js
+│   └── video/            → file video lokal halaman Solar System (CC BY-SA 3.0)
 └── deep-space/
     ├── deep-space.html   → filter fakta + galeri + fakta acak
     ├── deep-space.css
