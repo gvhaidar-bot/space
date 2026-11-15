@@ -26,6 +26,10 @@ space/
 │   ├── galaxy.html       → 6 galaksi, filter bentuk + fakta acak
 │   ├── galaxy.css
 │   └── galaxy.js
+├── solar-system/
+│   ├── solar-system.html → video + grid isi tata surya + link-link
+│   ├── solar-system.css
+│   └── solar-system.js
 └── deep-space/
     ├── deep-space.html   → filter fakta + galeri + fakta acak
     ├── deep-space.css
@@ -39,12 +43,12 @@ space/
 | 1 | Home | `home/` | Hero + navigasi |
 | 2 | Planets | `planets/` | 8 planet tata surya |
 | 3 | Galaxy | `galaxy/` | 6 galaksi |
-| 4 | Deep Space | `deep-space/` | Nebula, lubang hitam, fenomena |
-| 5 | About | `about/` | Tentang website ini |
+| 4 | Solar System | `solar-system/` | Video, isi tata surya, link |
+| 5 | Deep Space | `deep-space/` | Nebula, lubang hitam, fenomena |
+| 6 | About | `about/` | Tentang website ini |
 
 Warna: latar `#050a0f`, aksen cyan `#1be4b2`. Font: Space Grotesk + Playfair Display.
 
 ## Rencana berikutnya
 
-- Halaman 6: Solar System
 - Halaman 7: Space Facts
