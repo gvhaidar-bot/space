@@ -1,107 +1,107 @@
 :root {
-  --bg-color: #030613;
-  --text-main: #e2e8f0;
-  --text-muted: #8b9bb4;
-  --accent-cyan: #1be4b2;
-  --accent-purple: #1be4b2;
-  --card-bg: rgba(9, 20, 28, 0.72);
-  --card-border: rgba(27, 228, 178, 0.22);
+  --bg-color: #030613; /* variabel warna background utama */
+  --text-main: #e2e8f0; /* variabel warna teks utama */
+  --text-muted: #8b9bb4; /* variabel warna teks yang redup */
+  --accent-cyan: #1be4b2; /* variabel warna aksen utama (cyan kehijauan) */
+  --accent-purple: #1be4b2; /* variabel warna aksen kedua */
+  --card-bg: rgba(9, 20, 28, 0.72); /* variabel warna background kartu */
+  --card-border: rgba(27, 228, 178, 0.22); /* variabel warna garis tepi kartu */
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* padding dan border ikut dihitung dalam ukuran elemen, jadi ukurannya tidak melebar */
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #050a0f;
-  color: var(--text-main);
-  font-family: "Space Grotesk", sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow-x: hidden;
+  margin: 0; /* jarak luar elemen, ruang kosong di sekelilingnya */
+  padding: 0; /* jarak dalam elemen, ruang antara tepi dan isinya */
+  background-color: #050a0f; /* warna background-nya */
+  color: var(--text-main); /* warna teks elemen ini */
+  font-family: "Space Grotesk", sans-serif; /* jenis huruf (font) yang dipakai */
+  min-height: 100vh; /* tinggi minimalnya segini */
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  flex-direction: column; /* isi flexbox disusun ke bawah (vertikal) */
+  position: relative; /* posisinya normal tapi jadi patokan buat elemen di dalamnya */
+  overflow-x: hidden; /* scroll menyamping dimatikan, isi yang melebar disembunyikan */
 }
 
 .container {
-  max-width: 1300px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 80px 40px;
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 80px;
-  align-items: center;
-  position: relative;
-  z-index: 1;
+  max-width: 1300px; /* lebar maksimalnya dibatasi sampai segini */
+  width: 100%; /* lebar elemennya diatur segini */
+  margin: 0 auto; /* ruang kosong di luar elemennya */
+  padding: 80px 40px; /* ruang di dalam elemen antara tepi sama isinya */
+  display: grid; /* pakai grid, isi di dalamnya tersusun dalam baris dan kolom */
+  grid-template-columns: 1fr 1.1fr; /* pembagian kolom grid-nya diatur di sini */
+  gap: 80px; /* jarak antar elemen di dalamnya */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  position: relative; /* posisinya normal tapi jadi patokan buat elemen di dalamnya */
+  z-index: 1; /* urutan tumpukannya, makin besar angkanya makin di depan */
 }
 
 /* Left Column */
 .left-content {
-  padding-right: 20px;
+  padding-right: 20px; /* jarak dalam bagian kanannya */
 }
 
 .about-me-label {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: var(--accent-cyan);
-  margin-bottom: 24px;
-  font-weight: 600;
-  display: inline-block;
-  background: rgba(27, 228, 178, 0.05);
-  padding: 8px 16px;
-  border-radius: 6px;
-  border: 1px solid rgba(27, 228, 178, 0.2);
-  box-shadow: 0 0 15px rgba(27, 228, 178, 0.1);
+  font-size: 0.85rem; /* ukuran font-nya */
+  text-transform: uppercase; /* teksnya ditampilkan huruf kapital semua */
+  letter-spacing: 4px; /* jarak antar hurufnya */
+  color: var(--accent-cyan); /* ngatur warna teksnya */
+  margin-bottom: 24px; /* jarak luar bagian bawahnya */
+  font-weight: 600; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  display: inline-block; /* tampil sebaris dengan teks tapi ukurannya tetap bisa diatur */
+  background: rgba(27, 228, 178, 0.05); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  padding: 8px 16px; /* jarak dalam elemen, ruang antara tepi dan isinya */
+  border-radius: 6px; /* sudut elemennya dibikin melengkung segini */
+  border: 1px solid rgba(27, 228, 178, 0.2); /* garis tepi elemennya diatur sekaligus (tebal, gaya, warna) */
+  box-shadow: 0 0 15px rgba(27, 228, 178, 0.1); /* bayangan di sekeliling elemen biar kelihatan timbul */
 }
 
 .main-heading {
-  font-size: 4rem;
-  line-height: 1.1;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-  color: #ffffff;
-  letter-spacing: -1px;
+  font-size: 4rem; /* ukuran hurufnya */
+  line-height: 1.1; /* jarak antar baris teksnya */
+  font-weight: 700; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  margin: 0 0 10px 0; /* jarak luar elemen, ruang kosong di sekelilingnya */
+  color: #ffffff; /* warna teksnya */
+  letter-spacing: -1px; /* jarak antar hurufnya */
 }
 
 .sub-heading {
-  font-family: "Playfair Display", serif;
-  font-size: 4.2rem;
-  font-weight: normal;
-  font-style: italic;
-  margin: 0 0 40px 0;
+  font-family: "Playfair Display", serif; /* jenis huruf (font) yang dipakai */
+  font-size: 4.2rem; /* besar kecilnya huruf diatur di sini */
+  font-weight: normal; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  font-style: italic; /* hurufnya dibikin miring */
+  margin: 0 0 40px 0; /* ruang kosong di luar elemennya */
   background: linear-gradient(
     45deg,
     var(--accent-cyan),
     #ffffff,
     var(--accent-purple)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  animation: gradientText 6s ease infinite;
+  ); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  -webkit-background-clip: text; /* background-nya dipotong mengikuti bentuk teksnya */
+  -webkit-text-fill-color: transparent; /* warna isi teksnya (dibikin transparan biar gradasi background-nya yang kelihatan) */
+  background-size: 200% auto; /* ukuran gambar background-nya */
+  animation: gradientText 6s ease infinite; /* animasi keyframes yang disebut di sini dijalankan */
 }
 
 @keyframes gradientText {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 50%; /* posisi gambar/gradasi background-nya digeser */
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 50%; /* posisi gambar/gradasi background-nya digeser */
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 50%; /* posisi gambar/gradasi background-nya digeser */
   }
 }
 
 .description {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 24px;
+  color: var(--text-muted); /* warna teks elemen ini */
+  font-size: 1.05rem; /* ukuran font-nya */
+  line-height: 1.8; /* jarak antar baris teksnya */
+  margin-bottom: 24px; /* jarak luar bagian bawahnya */
 }
 
 .highlight-box {
@@ -109,86 +109,86 @@ body {
     145deg,
     rgba(15, 23, 42, 0.5),
     rgba(5, 10, 15, 0.8)
-  );
-  border: 1px solid rgba(27, 228, 178, 0.2);
-  padding: 32px;
-  border-radius: 16px;
-  margin-top: 48px;
-  font-style: italic;
-  color: #cbd5e1;
+  ); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  border: 1px solid rgba(27, 228, 178, 0.2); /* garis tepi elemennya diatur sekaligus (tebal, gaya, warna) */
+  padding: 32px; /* ruang di dalam elemen antara tepi sama isinya */
+  border-radius: 16px; /* sudut elemennya dibikin melengkung segini */
+  margin-top: 48px; /* jarak luar bagian atasnya */
+  font-style: italic; /* hurufnya dibikin miring */
+  color: #cbd5e1; /* ngatur warna teksnya */
   box-shadow:
     0 10px 40px rgba(27, 228, 178, 0.05),
-    inset 0 0 20px rgba(27, 228, 178, 0.02);
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(12px);
+    inset 0 0 20px rgba(27, 228, 178, 0.02); /* bayangan di sekeliling elemen biar kelihatan timbul */
+  position: relative; /* posisinya normal tapi jadi patokan buat elemen di dalamnya */
+  overflow: hidden; /* isi yang keluar dari kotaknya disembunyikan */
+  backdrop-filter: blur(12px); /* area di belakang elemen dibikin blur (efek kaca) */
 }
 
 .highlight-box::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
+  content: ""; /* isi elemen semu ini dikosongin, cuma buat bentuk hiasan */
+  position: absolute; /* posisinya bebas, patokannya elemen induk terdekat yang punya posisi */
+  top: 0; /* jarak posisinya dari atas */
+  left: 0; /* jarak posisinya dari kiri */
+  right: 0; /* jarak posisinya dari kanan */
+  height: 2px; /* tinggi elemennya */
   background: linear-gradient(
     90deg,
     transparent,
     var(--accent-cyan),
     transparent
-  );
+  ); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
 }
 
 .highlight-box p {
-  margin: 0;
-  line-height: 1.8;
-  font-size: 1.1rem;
+  margin: 0; /* jarak luar elemen, ruang kosong di sekelilingnya */
+  line-height: 1.8; /* jarak antar baris teksnya */
+  font-size: 1.1rem; /* ukuran hurufnya */
 }
 
 /* Right Column (Grid) */
 .features-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  display: grid; /* pakai grid, isi di dalamnya tersusun dalam baris dan kolom */
+  grid-template-columns: 1fr 1fr; /* pembagian kolom grid-nya diatur di sini */
+  gap: 24px; /* jarak antar elemen di dalamnya */
 }
 
 .feature-card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 20px;
-  padding: 40px 30px;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: var(--card-bg); /* warna background-nya */
+  border: 1px solid var(--card-border); /* garis tepi elemennya diatur sekaligus (tebal, gaya, warna) */
+  border-radius: 20px; /* sudut elemennya dibikin melengkung segini */
+  padding: 40px 30px; /* jarak dalam elemen, ruang antara tepi dan isinya */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* perubahan nilainya dibikin bergerak halus, tidak patah-patah */
+  position: relative; /* posisinya normal tapi jadi patokan buat elemen di dalamnya */
+  overflow: hidden; /* isi yang keluar dari kotaknya disembunyikan */
+  backdrop-filter: blur(10px); /* area di belakang elemen dibikin blur (efek kaca) */
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  flex-direction: column; /* isi flexbox disusun ke bawah (vertikal) */
+  justify-content: center; /* isi di dalamnya diratain tengah secara horizontal */
 }
 
 .feature-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  border-color: rgba(27, 228, 178, 0.4);
+  transform: translateY(-8px) scale(1.03); /* elemennya digeser ke atas/bawah dari posisi awalnya */
+  border-color: rgba(27, 228, 178, 0.4); /* warna garis tepinya */
   box-shadow:
     0 20px 40px rgba(27, 228, 178, 0.1),
-    inset 0 0 20px rgba(27, 228, 178, 0.05);
-  z-index: 2;
+    inset 0 0 20px rgba(27, 228, 178, 0.05); /* bayangan di sekeliling elemen biar kelihatan timbul */
+  z-index: 2; /* urutan tumpukannya, makin besar angkanya makin di depan */
 }
 
 .feature-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
+  content: ""; /* isi elemen semu ini dikosongin, cuma buat bentuk hiasan */
+  position: absolute; /* posisinya bebas, patokannya elemen induk terdekat yang punya posisi */
+  top: 0; /* jarak posisinya dari atas */
+  left: 0; /* jarak posisinya dari kiri */
+  right: 0; /* jarak posisinya dari kanan */
+  height: 2px; /* tinggi elemennya */
   background: linear-gradient(
     90deg,
     transparent,
     rgba(255, 255, 255, 0.05),
     transparent
-  );
-  transition: all 0.4s ease;
+  ); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  transition: all 0.4s ease; /* perubahan nilainya dibikin bergerak halus, tidak patah-patah */
 }
 
 .feature-card:hover::before {
@@ -197,7 +197,7 @@ body {
     transparent,
     var(--accent-cyan),
     transparent
-  );
+  ); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
 }
 
 .feature-card:nth-child(odd):hover::before {
@@ -206,100 +206,100 @@ body {
     transparent,
     var(--accent-purple),
     transparent
-  );
+  ); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
 }
 
 .icon-wrapper {
-  width: 54px;
-  height: 54px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 24px;
-  background: rgba(27, 228, 178, 0.08);
-  color: var(--accent-cyan);
-  border: 1px solid rgba(27, 228, 178, 0.15);
-  transition: all 0.4s ease;
+  width: 54px; /* lebar elemennya */
+  height: 54px; /* tinggi elemennya */
+  border-radius: 14px; /* sudut elemennya dibikin melengkung segini */
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  justify-content: center; /* isi di dalamnya diratain tengah secara horizontal */
+  margin-bottom: 24px; /* jarak luar bagian bawahnya */
+  background: rgba(27, 228, 178, 0.08); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  color: var(--accent-cyan); /* warna teksnya */
+  border: 1px solid rgba(27, 228, 178, 0.15); /* garis tepi elemennya diatur sekaligus (tebal, gaya, warna) */
+  transition: all 0.4s ease; /* perubahan nilainya dibikin bergerak halus, tidak patah-patah */
 }
 
 .icon-wrapper svg {
-  width: 26px;
-  height: 26px;
+  width: 26px; /* lebar elemennya diatur segini */
+  height: 26px; /* tinggi elemennya */
 }
 
 .feature-card:hover .icon-wrapper {
-  background: rgba(27, 228, 178, 0.15);
-  color: var(--accent-purple);
-  border-color: rgba(27, 228, 178, 0.3);
-  transform: rotate(10deg) scale(1.1);
-  box-shadow: 0 0 20px rgba(27, 228, 178, 0.2);
+  background: rgba(27, 228, 178, 0.15); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  color: var(--accent-purple); /* warna teks elemen ini */
+  border-color: rgba(27, 228, 178, 0.3); /* warna garis tepinya */
+  transform: rotate(10deg) scale(1.1); /* ukuran elemennya diubah pakai skala (diperbesar/diperkecil) */
+  box-shadow: 0 0 20px rgba(27, 228, 178, 0.2); /* bayangan di sekeliling elemen biar kelihatan timbul */
 }
 
 /* Alternate colors for cards 2 and 4 */
 .feature-card:nth-child(even) .icon-wrapper {
-  background: rgba(27, 228, 178, 0.08);
-  color: var(--accent-purple);
-  border: 1px solid rgba(27, 228, 178, 0.15);
+  background: rgba(27, 228, 178, 0.08); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  color: var(--accent-purple); /* ngatur warna teksnya */
+  border: 1px solid rgba(27, 228, 178, 0.15); /* garis tepi elemennya diatur sekaligus (tebal, gaya, warna) */
 }
 
 .feature-card:nth-child(even):hover .icon-wrapper {
-  background: rgba(27, 228, 178, 0.15);
-  color: var(--accent-cyan);
-  border-color: rgba(27, 228, 178, 0.3);
-  transform: rotate(-10deg) scale(1.1);
-  box-shadow: 0 0 20px rgba(27, 228, 178, 0.2);
+  background: rgba(27, 228, 178, 0.15); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  color: var(--accent-cyan); /* warna teksnya */
+  border-color: rgba(27, 228, 178, 0.3); /* warna garis tepinya */
+  transform: rotate(-10deg) scale(1.1); /* ukuran elemennya diubah pakai skala (diperbesar/diperkecil) */
+  box-shadow: 0 0 20px rgba(27, 228, 178, 0.2); /* bayangan di sekeliling elemen biar kelihatan timbul */
 }
 
 .feature-title {
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin: 0 0 14px 0;
-  color: #fff;
-  letter-spacing: 0.5px;
+  font-size: 1.35rem; /* besar kecilnya huruf diatur di sini */
+  font-weight: 700; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  margin: 0 0 14px 0; /* ruang kosong di luar elemennya */
+  color: #fff; /* warna teks elemen ini */
+  letter-spacing: 0.5px; /* jarak antar hurufnya */
 }
 
 .feature-desc {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin: 0;
+  font-size: 0.95rem; /* ukuran font-nya */
+  color: var(--text-muted); /* ngatur warna teksnya */
+  line-height: 1.6; /* jarak antar baris teksnya */
+  margin: 0; /* jarak luar elemen, ruang kosong di sekelilingnya */
 }
 
 /* Glowing orbs in background */
 .orb-1,
 .orb-2 {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(100px);
-  z-index: 0;
-  pointer-events: none;
+  position: fixed; /* posisinya nempel di layar, tidak ikut bergerak pas halaman di-scroll */
+  border-radius: 50%; /* sudut elemennya dibikin melengkung segini */
+  filter: blur(100px); /* efek filter visual buat elemennya (blur, saturasi, dan sejenisnya) */
+  z-index: 0; /* urutan tumpukannya, makin besar angkanya makin di depan */
+  pointer-events: none; /* elemen ini tidak menangkap klik, kliknya tembus ke elemen di belakangnya */
 }
 
 .orb-1 {
-  width: 400px;
-  height: 400px;
-  background: rgba(27, 228, 178, 0.15);
-  top: -10%;
-  right: 10%;
-  animation: float 20s ease-in-out infinite alternate;
+  width: 400px; /* lebar elemennya */
+  height: 400px; /* tinggi elemennya */
+  background: rgba(27, 228, 178, 0.15); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  top: -10%; /* jarak posisinya dari atas */
+  right: 10%; /* jarak posisinya dari kanan */
+  animation: float 20s ease-in-out infinite alternate; /* animasi keyframes yang disebut di sini dijalankan */
 }
 
 .orb-2 {
-  width: 300px;
-  height: 300px;
-  background: rgba(27, 228, 178, 0.1);
-  bottom: -10%;
-  left: 10%;
-  animation: float 15s ease-in-out infinite alternate-reverse;
+  width: 300px; /* lebar elemennya diatur segini */
+  height: 300px; /* tinggi elemennya */
+  background: rgba(27, 228, 178, 0.1); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  bottom: -10%; /* jarak posisinya dari bawah */
+  left: 10%; /* jarak posisinya dari kiri */
+  animation: float 15s ease-in-out infinite alternate-reverse; /* animasi keyframes yang disebut di sini dijalankan */
 }
 
 @keyframes float {
   0% {
-    transform: translate(0, 0);
+    transform: translate(0, 0); /* elemennya digeser dari posisi awalnya */
   }
   100% {
-    transform: translate(50px, 50px);
+    transform: translate(50px, 50px); /* elemennya digeser dari posisi awalnya */
   }
 }
 
@@ -307,400 +307,400 @@ body {
    Header Section
    ========================================= */
 header {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  padding: 24px 6%;
-  max-width: 1440px;
-  margin: 0 auto;
-  width: 100%;
+  position: relative; /* posisinya normal tapi jadi patokan buat elemen di dalamnya */
+  z-index: 10; /* urutan tumpukannya, makin besar angkanya makin di depan */
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  padding: 24px 6%; /* ruang di dalam elemen antara tepi sama isinya */
+  max-width: 1440px; /* lebar maksimalnya dibatasi sampai segini */
+  margin: 0 auto; /* ruang kosong di luar elemennya */
+  width: 100%; /* lebar elemennya */
 }
 
 .logo-area {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  gap: 8px;
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  text-decoration: none; /* hiasan teks bawaan (kayak garis bawah link) dihilangkan */
+  gap: 8px; /* jarak antar elemen di dalamnya */
 }
 
 .logo-text {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: #ffffff;
+  font-size: 1.5rem; /* ukuran hurufnya */
+  font-weight: 700; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  letter-spacing: 1.5px; /* jarak antar hurufnya */
+  color: #ffffff; /* warna teksnya */
 }
 
 .logo-dot {
-  color: var(--accent-cyan);
-  text-shadow: 0 0 12px var(--accent-cyan);
+  color: var(--accent-cyan); /* warna teks elemen ini */
+  text-shadow: 0 0 12px var(--accent-cyan); /* bayangan di teksnya biar kelihatan timbul/menyala */
 }
 
 /* Center Pill Nav Capsule */
 .nav-capsule {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  list-style: none;
-  padding: 10px 32px;
-  background: rgba(8, 18, 26, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 120px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-  margin: 0;
+  position: absolute; /* posisinya bebas, patokannya elemen induk terdekat yang punya posisi */
+  left: 50%; /* jarak posisinya dari kiri */
+  transform: translateX(-50%); /* elemennya digeser ke kiri/kanan dari posisi awalnya */
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  gap: 28px; /* jarak antar elemen di dalamnya */
+  list-style: none; /* tanda bullet/angka bawaan daftar dihilangkan */
+  padding: 10px 32px; /* jarak dalam elemen, ruang antara tepi dan isinya */
+  background: rgba(8, 18, 26, 0.65); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  border: 1px solid rgba(255, 255, 255, 0.08); /* garis tepi elemennya diatur sekaligus (tebal, gaya, warna) */
+  border-radius: 120px; /* sudut elemennya dibikin melengkung segini */
+  backdrop-filter: blur(16px); /* area di belakang elemen dibikin blur (efek kaca) */
+  -webkit-backdrop-filter: blur(16px); /* sama kayak backdrop-filter, versi buat browser webkit */
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4); /* bayangan di sekeliling elemen biar kelihatan timbul */
+  margin: 0; /* jarak luar elemen, ruang kosong di sekelilingnya */
 }
 
 .nav-capsule a {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-size: 0.92rem;
-  font-weight: 400;
-  transition: all 0.25s ease;
+  text-decoration: none; /* hiasan teks bawaan (kayak garis bawah link) dihilangkan */
+  color: var(--text-muted); /* ngatur warna teksnya */
+  font-size: 0.92rem; /* besar kecilnya huruf diatur di sini */
+  font-weight: 400; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  transition: all 0.25s ease; /* perubahan nilainya dibikin bergerak halus, tidak patah-patah */
 }
 
 .nav-capsule a:hover,
 .nav-capsule a.active {
-  color: #ffffff;
+  color: #ffffff; /* warna teksnya */
 }
 
 /* =========================================
    Footer Section
    ========================================= */
 .space-footer {
-  width: 100%;
+  width: 100%; /* lebar elemennya diatur segini */
   background: linear-gradient(
     to bottom,
     transparent,
     rgba(5, 10, 15, 0.75) 20%,
     rgba(5, 10, 15, 0.95) 100%
-  );
-  color: var(--text-muted);
-  position: relative;
-  z-index: 10;
-  margin-top: auto;
+  ); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  color: var(--text-muted); /* warna teks elemen ini */
+  position: relative; /* posisinya normal tapi jadi patokan buat elemen di dalamnya */
+  z-index: 10; /* urutan tumpukannya, makin besar angkanya makin di depan */
+  margin-top: auto; /* jarak luar bagian atasnya */
 }
 
 .footer-content {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 60px 6% 32px 6%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1440px; /* lebar maksimalnya dibatasi sampai segini */
+  margin: 0 auto; /* ruang kosong di luar elemennya */
+  padding: 60px 6% 32px 6%; /* ruang di dalam elemen antara tepi sama isinya */
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  flex-direction: column; /* isi flexbox disusun ke bawah (vertikal) */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
 }
 
 .footer-logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  margin-bottom: 20px; /* jarak luar bagian bawahnya */
 }
 
 .footer-logo .logo-text {
-  font-size: 1.6rem;
+  font-size: 1.6rem; /* ukuran font-nya */
 }
 
 .footer-desc {
-  text-align: center;
-  max-width: 580px;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  text-align: center; /* teksnya diratain tengah */
+  max-width: 580px; /* lebar maksimalnya dibatasi sampai segini */
+  font-size: 0.95rem; /* ukuran hurufnya */
+  line-height: 1.6; /* jarak antar baris teksnya */
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.08); /* garis tepi bagian atasnya saja */
+  width: 100%; /* lebar elemennya */
 }
 
 .footer-bottom-inner {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 24px 6%;
-  text-align: center;
-  font-size: 0.88rem;
+  max-width: 1440px; /* lebar maksimalnya dibatasi sampai segini */
+  margin: 0 auto; /* jarak luar elemen, ruang kosong di sekelilingnya */
+  padding: 24px 6%; /* jarak dalam elemen, ruang antara tepi dan isinya */
+  text-align: center; /* teksnya diratain tengah */
+  font-size: 0.88rem; /* besar kecilnya huruf diatur di sini */
 }
 
 .footer-bottom-inner a {
-  color: var(--accent-cyan);
-  text-decoration: none;
-  font-weight: 500;
+  color: var(--accent-cyan); /* ngatur warna teksnya */
+  text-decoration: none; /* hiasan teks bawaan (kayak garis bawah link) dihilangkan */
+  font-weight: 500; /* ketebalan hurufnya, makin besar angkanya makin tebal */
 }
 
 .footer-bottom-inner a:hover {
-  text-decoration: underline;
-  text-shadow: 0 0 10px rgba(27, 228, 178, 0.4);
+  text-decoration: underline; /* hiasan teksnya (garis bawah dan sejenisnya) */
+  text-shadow: 0 0 10px rgba(27, 228, 178, 0.4); /* bayangan di teksnya biar kelihatan timbul/menyala */
 }
 
 /* Responsive */
 @media (max-width: 1200px) {
   .container {
-    grid-template-columns: 1fr;
-    gap: 60px;
+    grid-template-columns: 1fr; /* pembagian kolom grid-nya diatur di sini */
+    gap: 60px; /* jarak antar elemen di dalamnya */
   }
   .left-content {
-    padding-right: 0;
-    text-align: center;
+    padding-right: 0; /* jarak dalam bagian kanannya */
+    text-align: center; /* teksnya diratain tengah */
   }
   .description {
-    max-width: 800px;
-    margin: 0 auto 24px auto;
+    max-width: 800px; /* lebar maksimalnya dibatasi sampai segini */
+    margin: 0 auto 24px auto; /* ruang kosong di luar elemennya */
   }
   .highlight-box {
-    text-align: left;
+    text-align: left; /* teksnya diratain kiri */
   }
 }
 
 @media (max-width: 768px) {
   .features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* pembagian kolom grid-nya diatur di sini */
   }
   .main-heading {
-    font-size: 3rem;
+    font-size: 3rem; /* ukuran font-nya */
   }
   .sub-heading {
-    font-size: 3.2rem;
+    font-size: 3.2rem; /* ukuran hurufnya */
   }
   .container {
-    padding: 40px 20px;
+    padding: 40px 20px; /* ruang di dalam elemen antara tepi sama isinya */
   }
 
   header {
-    flex-direction: column;
-    gap: 18px;
-    padding: 20px;
+    flex-direction: column; /* isi flexbox disusun ke bawah (vertikal) */
+    gap: 18px; /* jarak antar elemen di dalamnya */
+    padding: 20px; /* jarak dalam elemen, ruang antara tepi dan isinya */
   }
 
   .nav-capsule {
-    position: relative;
-    left: 0;
-    transform: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 8px 18px;
-    gap: 14px;
-    font-size: 0.85rem;
+    position: relative; /* posisinya normal tapi jadi patokan buat elemen di dalamnya */
+    left: 0; /* jarak posisinya dari kiri */
+    transform: none; /* bentuk/posisi elemennya diubah (geser, putar, atau skala) */
+    flex-wrap: wrap; /* isi flexbox boleh turun ke baris baru kalau tidak muat */
+    justify-content: center; /* isi di dalamnya diratain tengah secara horizontal */
+    padding: 8px 18px; /* ruang di dalam elemen antara tepi sama isinya */
+    gap: 14px; /* jarak antar elemen di dalamnya */
+    font-size: 0.85rem; /* besar kecilnya huruf diatur di sini */
   }
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  opacity: 0; /* tingkat transparannya (1 berarti penuh, 0 berarti hilang) */
+  transform: translateY(24px); /* elemennya digeser ke atas/bawah dari posisi awalnya */
+  transition: opacity 0.7s ease, transform 0.7s ease; /* perubahan nilainya dibikin bergerak halus, tidak patah-patah */
 }
 
 .reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /* tingkat transparannya (1 berarti penuh, 0 berarti hilang) */
+  transform: translateY(0); /* elemennya digeser ke atas/bawah dari posisi awalnya */
 }
 .gx-hero {
-  align-items: start;
+  align-items: start; /* ngatur perataan vertikal isi di dalamnya */
 }
 
 .gx-stat-number {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0 0 6px 0;
-  color: var(--accent-cyan);
-  text-shadow: 0 0 18px rgba(27, 228, 178, 0.35);
-  letter-spacing: 0.5px;
+  font-size: 2rem; /* ukuran font-nya */
+  font-weight: 700; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  margin: 0 0 6px 0; /* jarak luar elemen, ruang kosong di sekelilingnya */
+  color: var(--accent-cyan); /* warna teksnya */
+  text-shadow: 0 0 18px rgba(27, 228, 178, 0.35); /* bayangan di teksnya biar kelihatan timbul/menyala */
+  letter-spacing: 0.5px; /* jarak antar hurufnya */
 }
 
 .gx-bg-container {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
+  position: fixed; /* posisinya nempel di layar, tidak ikut bergerak pas halaman di-scroll */
+  inset: 0; /* posisi keempat sisinya diatur sekaligus (atas kanan bawah kiri) */
+  z-index: 0; /* urutan tumpukannya, makin besar angkanya makin di depan */
+  overflow: hidden; /* isi yang keluar dari kotaknya disembunyikan */
+  pointer-events: none; /* elemen ini tidak menangkap klik, kliknya tembus ke elemen di belakangnya */
 }
 
 .gx-bg-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.4;
+  width: 100%; /* lebar elemennya diatur segini */
+  height: 100%; /* tinggi elemennya */
+  object-fit: cover; /* gambar diperbesar sampai nutupin area, kelebihannya kepotong */
+  opacity: 0.4; /* tingkat transparannya (1 berarti penuh, 0 berarti hilang) */
 }
 
 .gx-bg-container::after {
-  content: "";
-  position: absolute;
-  inset: 0;
+  content: ""; /* isi elemen semu ini dikosongin, cuma buat bentuk hiasan */
+  position: absolute; /* posisinya bebas, patokannya elemen induk terdekat yang punya posisi */
+  inset: 0; /* posisi keempat sisinya diatur sekaligus (atas kanan bawah kiri) */
   background: linear-gradient(
     to bottom,
     rgba(5, 10, 15, 0.82),
     rgba(5, 10, 15, 0.45) 40%,
     rgba(5, 10, 15, 0.92)
-  );
+  ); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
 }
 
 .gx-section {
-  max-width: 1300px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px 40px 80px 40px;
-  position: relative;
-  z-index: 1;
+  max-width: 1300px; /* lebar maksimalnya dibatasi sampai segini */
+  width: 100%; /* lebar elemennya */
+  margin: 0 auto; /* ruang kosong di luar elemennya */
+  padding: 20px 40px 80px 40px; /* jarak dalam elemen, ruang antara tepi dan isinya */
+  position: relative; /* posisinya normal tapi jadi patokan buat elemen di dalamnya */
+  z-index: 1; /* urutan tumpukannya, makin besar angkanya makin di depan */
 }
 
 .gx-section-head {
-  text-align: center;
-  margin-bottom: 40px;
+  text-align: center; /* teksnya diratain tengah */
+  margin-bottom: 40px; /* jarak luar bagian bawahnya */
 }
 
 .gx-section-title {
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0 0 16px 0;
-  letter-spacing: -0.5px;
+  font-size: 2.6rem; /* ukuran hurufnya */
+  font-weight: 700; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  color: #ffffff; /* warna teks elemen ini */
+  margin: 0 0 16px 0; /* jarak luar elemen, ruang kosong di sekelilingnya */
+  letter-spacing: -0.5px; /* jarak antar hurufnya */
 }
 
 .gx-section-title .gx-italic {
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-weight: normal;
-  background: linear-gradient(45deg, var(--accent-cyan), #ffffff, var(--accent-cyan));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  animation: gradientText 6s ease infinite;
+  font-family: "Playfair Display", serif; /* jenis huruf (font) yang dipakai */
+  font-style: italic; /* hurufnya dibikin miring */
+  font-weight: normal; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  background: linear-gradient(45deg, var(--accent-cyan), #ffffff, var(--accent-cyan)); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  -webkit-background-clip: text; /* background-nya dipotong mengikuti bentuk teksnya */
+  -webkit-text-fill-color: transparent; /* warna isi teksnya (dibikin transparan biar gradasi background-nya yang kelihatan) */
+  background-size: 200% auto; /* ukuran gambar background-nya */
+  animation: gradientText 6s ease infinite; /* animasi keyframes yang disebut di sini dijalankan */
 }
 
 .gx-section-desc {
-  max-width: 640px;
-  margin: 0 auto;
+  max-width: 640px; /* lebar maksimalnya dibatasi sampai segini */
+  margin: 0 auto; /* ruang kosong di luar elemennya */
 }
 
 .gx-filter {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 28px;
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  flex-wrap: wrap; /* isi flexbox boleh turun ke baris baru kalau tidak muat */
+  justify-content: center; /* isi di dalamnya diratain tengah secara horizontal */
+  gap: 12px; /* jarak antar elemen di dalamnya */
+  margin-top: 28px; /* jarak luar bagian atasnya */
 }
 
 .gx-filter-btn {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  background: rgba(8, 18, 26, 0.65);
-  border: 1px solid rgba(27, 228, 178, 0.22);
-  border-radius: 120px;
-  padding: 9px 22px;
-  cursor: pointer;
-  transition: all 0.25s ease;
+  font-family: "Space Grotesk", sans-serif; /* jenis huruf (font) yang dipakai */
+  font-size: 0.9rem; /* besar kecilnya huruf diatur di sini */
+  font-weight: 500; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  color: var(--text-muted); /* ngatur warna teksnya */
+  background: rgba(8, 18, 26, 0.65); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  border: 1px solid rgba(27, 228, 178, 0.22); /* garis tepi elemennya diatur sekaligus (tebal, gaya, warna) */
+  border-radius: 120px; /* sudut elemennya dibikin melengkung segini */
+  padding: 9px 22px; /* ruang di dalam elemen antara tepi sama isinya */
+  cursor: pointer; /* kursor berubah jadi tangan pas di atasnya, tanda bisa diklik */
+  transition: all 0.25s ease; /* perubahan nilainya dibikin bergerak halus, tidak patah-patah */
 }
 
 .gx-filter-btn:hover {
-  color: #ffffff;
-  border-color: rgba(27, 228, 178, 0.45);
+  color: #ffffff; /* warna teksnya */
+  border-color: rgba(27, 228, 178, 0.45); /* warna garis tepinya */
 }
 
 .gx-filter-btn.active {
-  color: #050a0f;
-  background: var(--accent-cyan);
-  border-color: var(--accent-cyan);
-  box-shadow: 0 0 18px rgba(27, 228, 178, 0.35);
-  font-weight: 600;
+  color: #050a0f; /* warna teks elemen ini */
+  background: var(--accent-cyan); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  border-color: var(--accent-cyan); /* warna garis tepinya */
+  box-shadow: 0 0 18px rgba(27, 228, 178, 0.35); /* bayangan di sekeliling elemen biar kelihatan timbul */
+  font-weight: 600; /* ketebalan hurufnya, makin besar angkanya makin tebal */
 }
 
 .gx-galaxies-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  display: grid; /* pakai grid, isi di dalamnya tersusun dalam baris dan kolom */
+  grid-template-columns: repeat(3, 1fr); /* pembagian kolom grid-nya diatur di sini */
+  gap: 24px; /* jarak antar elemen di dalamnya */
 }
 
 .gx-card-tag {
-  display: inline-block;
-  align-self: flex-start;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--accent-cyan);
-  background: rgba(27, 228, 178, 0.08);
-  border: 1px solid rgba(27, 228, 178, 0.2);
-  border-radius: 6px;
-  padding: 5px 12px;
-  margin-bottom: 18px;
+  display: inline-block; /* tampil sebaris dengan teks tapi ukurannya tetap bisa diatur */
+  align-self: flex-start; /* posisi vertikal elemen ini sendiri diatur di sini */
+  font-size: 0.75rem; /* ukuran font-nya */
+  font-weight: 600; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  text-transform: uppercase; /* teksnya ditampilkan huruf kapital semua */
+  letter-spacing: 2px; /* jarak antar hurufnya */
+  color: var(--accent-cyan); /* ngatur warna teksnya */
+  background: rgba(27, 228, 178, 0.08); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  border: 1px solid rgba(27, 228, 178, 0.2); /* garis tepi elemennya diatur sekaligus (tebal, gaya, warna) */
+  border-radius: 6px; /* sudut elemennya dibikin melengkung segini */
+  padding: 5px 12px; /* jarak dalam elemen, ruang antara tepi dan isinya */
+  margin-bottom: 18px; /* jarak luar bagian bawahnya */
 }
 
 .gx-galaxy-card {
-  justify-content: flex-start;
-  cursor: pointer;
+  justify-content: flex-start; /* isi di dalamnya diratain ke awal (kiri) */
+  cursor: pointer; /* kursor berubah jadi tangan pas di atasnya, tanda bisa diklik */
 }
 
 .gx-galaxy-card.active {
-  border-color: rgba(27, 228, 178, 0.6);
-  box-shadow: 0 0 24px rgba(27, 228, 178, 0.2);
+  border-color: rgba(27, 228, 178, 0.6); /* warna garis tepinya */
+  box-shadow: 0 0 24px rgba(27, 228, 178, 0.2); /* bayangan di sekeliling elemen biar kelihatan timbul */
 }
 
 .gx-card-data {
-  font-size: 0.85rem;
-  color: var(--accent-cyan);
-  margin: 16px 0 0 0;
-  line-height: 1.6;
+  font-size: 0.85rem; /* ukuran hurufnya */
+  color: var(--accent-cyan); /* warna teksnya */
+  margin: 16px 0 0 0; /* jarak luar elemen, ruang kosong di sekelilingnya */
+  line-height: 1.6; /* jarak antar baris teksnya */
 }
 
 .gx-empty {
-  text-align: center;
-  color: var(--text-muted);
-  margin-top: 24px;
+  text-align: center; /* teksnya diratain tengah */
+  color: var(--text-muted); /* warna teks elemen ini */
+  margin-top: 24px; /* jarak luar bagian atasnya */
 }
 
 .gx-random-section {
-  padding-top: 0;
+  padding-top: 0; /* jarak dalam bagian atasnya */
 }
 
 .gx-random-box {
-  margin-top: 0;
-  text-align: center;
+  margin-top: 0; /* jarak luar bagian atasnya */
+  text-align: center; /* teksnya diratain tengah */
 }
 
 .gx-random-text {
-  font-size: 1.15rem;
-  min-height: 3.6em;
-  transition: opacity 0.18s ease;
+  font-size: 1.15rem; /* besar kecilnya huruf diatur di sini */
+  min-height: 3.6em; /* tinggi minimalnya segini */
+  transition: opacity 0.18s ease; /* perubahan nilainya dibikin bergerak halus, tidak patah-patah */
 }
 
 .gx-random-btn {
-  font-family: "Space Grotesk", sans-serif;
-  margin-top: 24px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #050a0f;
-  background: var(--accent-cyan);
-  border: none;
-  border-radius: 120px;
-  padding: 12px 30px;
-  cursor: pointer;
-  box-shadow: 0 0 20px rgba(27, 228, 178, 0.3);
-  transition: all 0.25s ease;
+  font-family: "Space Grotesk", sans-serif; /* jenis huruf (font) yang dipakai */
+  margin-top: 24px; /* jarak luar bagian atasnya */
+  font-size: 0.95rem; /* ukuran font-nya */
+  font-weight: 600; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  color: #050a0f; /* ngatur warna teksnya */
+  background: var(--accent-cyan); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  border: none; /* garis tepi elemennya diatur sekaligus (tebal, gaya, warna) */
+  border-radius: 120px; /* sudut elemennya dibikin melengkung segini */
+  padding: 12px 30px; /* ruang di dalam elemen antara tepi sama isinya */
+  cursor: pointer; /* kursor berubah jadi tangan pas di atasnya, tanda bisa diklik */
+  box-shadow: 0 0 20px rgba(27, 228, 178, 0.3); /* bayangan di sekeliling elemen biar kelihatan timbul */
+  transition: all 0.25s ease; /* perubahan nilainya dibikin bergerak halus, tidak patah-patah */
 }
 
 .gx-random-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 28px rgba(27, 228, 178, 0.5);
+  transform: translateY(-2px); /* elemennya digeser ke atas/bawah dari posisi awalnya */
+  box-shadow: 0 0 28px rgba(27, 228, 178, 0.5); /* bayangan di sekeliling elemen biar kelihatan timbul */
 }
 
 @media (max-width: 1200px) {
   .gx-galaxies-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* pembagian kolom grid-nya diatur di sini */
   }
 }
 
 @media (max-width: 768px) {
   .gx-galaxies-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* pembagian kolom grid-nya diatur di sini */
   }
   .gx-section {
-    padding: 20px 20px 60px 20px;
+    padding: 20px 20px 60px 20px; /* jarak dalam elemen, ruang antara tepi dan isinya */
   }
   .gx-section-title {
-    font-size: 2rem;
+    font-size: 2rem; /* ukuran hurufnya */
   }
 }

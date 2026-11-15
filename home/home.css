@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --bg-dark: #050a0f;
-  --cyan-primary: #1be4b2;
-  --cyan-glow: rgba(27, 228, 178, 0.45);
-  --cyan-light: #6ffce0;
-  --text-main: #f0f6fa;
-  --text-dim: #8fa5b5;
-  --glass-border: rgba(27, 228, 178, 0.22);
-  --glass-bg: rgba(9, 20, 28, 0.72);
+  --bg-dark: #050a0f; /* variabel warna background yang lebih gelap */
+  --cyan-primary: #1be4b2; /* variabel warna cyan utama */
+  --cyan-glow: rgba(27, 228, 178, 0.45); /* variabel warna cyan buat efek menyala */
+  --cyan-light: #6ffce0; /* variabel warna cyan yang lebih terang */
+  --text-main: #f0f6fa; /* variabel warna teks utama */
+  --text-dim: #8fa5b5; /* variabel warna teks yang agak redup */
+  --glass-border: rgba(27, 228, 178, 0.22); /* variabel warna garis tepi efek kaca */
+  --glass-bg: rgba(9, 20, 28, 0.72); /* variabel warna background efek kaca */
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* jarak luar elemen, ruang kosong di sekelilingnya */
+  padding: 0; /* jarak dalam elemen, ruang antara tepi dan isinya */
+  box-sizing: border-box; /* padding dan border ikut dihitung dalam ukuran elemen, jadi ukurannya tidak melebar */
 }
 
 body {
@@ -22,228 +22,228 @@ body {
     "Outfit",
     -apple-system,
     BlinkMacSystemFont,
-    sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-main);
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
+    sans-serif; /* jenis huruf (font) yang dipakai */
+  background-color: var(--bg-dark); /* warna background-nya */
+  color: var(--text-main); /* warna teksnya */
+  min-height: 100vh; /* tinggi minimalnya segini */
+  position: relative; /* posisinya normal tapi jadi patokan buat elemen di dalamnya */
+  overflow-x: hidden; /* scroll menyamping dimatikan, isi yang melebar disembunyikan */
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  flex-direction: column; /* isi flexbox disusun ke bawah (vertikal) */
 }
 
 /* =========================================
    Space Background with Earth 
    ========================================= */
 .space-bg-container {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
+  position: fixed; /* posisinya nempel di layar, tidak ikut bergerak pas halaman di-scroll */
+  inset: 0; /* posisi keempat sisinya diatur sekaligus (atas kanan bawah kiri) */
+  width: 100vw; /* lebar elemennya */
+  height: 100vh; /* tinggi elemennya */
+  z-index: 0; /* urutan tumpukannya, makin besar angkanya makin di depan */
+  overflow: hidden; /* isi yang keluar dari kotaknya disembunyikan */
+  pointer-events: none; /* elemen ini tidak menangkap klik, kliknya tembus ke elemen di belakangnya */
 }
 
 .space-bg-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 85% center;
-  filter: brightness(0.85) contrast(1.1);
-  transform: scale(1.02);
+  position: absolute; /* posisinya bebas, patokannya elemen induk terdekat yang punya posisi */
+  inset: 0; /* posisi keempat sisinya diatur sekaligus (atas kanan bawah kiri) */
+  width: 100%; /* lebar elemennya diatur segini */
+  height: 100%; /* tinggi elemennya */
+  object-fit: cover; /* gambar diperbesar sampai nutupin area, kelebihannya kepotong */
+  object-position: 85% center; /* posisi gambar di dalam kotaknya */
+  filter: brightness(0.85) contrast(1.1); /* efek filter visual buat elemennya (blur, saturasi, dan sejenisnya) */
+  transform: scale(1.02); /* ukuran elemennya diubah pakai skala (diperbesar/diperkecil) */
 }
 
 /* =========================================
    Header Section
    ========================================= */
 header {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  padding: 24px 6%;
-  max-width: 1440px;
-  margin: 0 auto;
-  width: 100%;
+  position: relative; /* posisinya normal tapi jadi patokan buat elemen di dalamnya */
+  z-index: 10; /* urutan tumpukannya, makin besar angkanya makin di depan */
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  padding: 24px 6%; /* ruang di dalam elemen antara tepi sama isinya */
+  max-width: 1440px; /* lebar maksimalnya dibatasi sampai segini */
+  margin: 0 auto; /* ruang kosong di luar elemennya */
+  width: 100%; /* lebar elemennya */
 }
 
 .logo-area {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  gap: 8px;
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  text-decoration: none; /* hiasan teks bawaan (kayak garis bawah link) dihilangkan */
+  gap: 8px; /* jarak antar elemen di dalamnya */
 }
 
 .logo-text {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: #ffffff;
+  font-size: 1.5rem; /* ukuran hurufnya */
+  font-weight: 700; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  letter-spacing: 1.5px; /* jarak antar hurufnya */
+  color: #ffffff; /* warna teks elemen ini */
 }
 
 .logo-dot {
-  color: var(--cyan-primary);
-  text-shadow: 0 0 12px var(--cyan-primary);
+  color: var(--cyan-primary); /* ngatur warna teksnya */
+  text-shadow: 0 0 12px var(--cyan-primary); /* bayangan di teksnya biar kelihatan timbul/menyala */
 }
 
 /* Center Pill Nav Capsule */
 .nav-capsule {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  list-style: none;
-  padding: 10px 32px;
-  background: rgba(8, 18, 26, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 120px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  position: absolute; /* posisinya bebas, patokannya elemen induk terdekat yang punya posisi */
+  left: 50%; /* jarak posisinya dari kiri */
+  transform: translateX(-50%); /* elemennya digeser ke kiri/kanan dari posisi awalnya */
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  gap: 28px; /* jarak antar elemen di dalamnya */
+  list-style: none; /* tanda bullet/angka bawaan daftar dihilangkan */
+  padding: 10px 32px; /* jarak dalam elemen, ruang antara tepi dan isinya */
+  background: rgba(8, 18, 26, 0.65); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  border: 1px solid rgba(255, 255, 255, 0.08); /* garis tepi elemennya diatur sekaligus (tebal, gaya, warna) */
+  border-radius: 120px; /* sudut elemennya dibikin melengkung segini */
+  backdrop-filter: blur(16px); /* area di belakang elemen dibikin blur (efek kaca) */
+  -webkit-backdrop-filter: blur(16px); /* sama kayak backdrop-filter, versi buat browser webkit */
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4); /* bayangan di sekeliling elemen biar kelihatan timbul */
 }
 
 .nav-capsule a {
-  text-decoration: none;
-  color: var(--text-dim);
-  font-size: 0.92rem;
-  font-weight: 400;
-  transition: all 0.25s ease;
+  text-decoration: none; /* hiasan teks bawaan (kayak garis bawah link) dihilangkan */
+  color: var(--text-dim); /* warna teksnya */
+  font-size: 0.92rem; /* besar kecilnya huruf diatur di sini */
+  font-weight: 400; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  transition: all 0.25s ease; /* perubahan nilainya dibikin bergerak halus, tidak patah-patah */
 }
 
 .nav-capsule a:hover {
-  color: #ffffff;
+  color: #ffffff; /* warna teks elemen ini */
 }
 
 /* =========================================
    Hero Layout
    ========================================= */
 main {
-  position: relative;
-  z-index: 5;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 6% 80px 6%;
+  position: relative; /* posisinya normal tapi jadi patokan buat elemen di dalamnya */
+  z-index: 5; /* urutan tumpukannya, makin besar angkanya makin di depan */
+  flex: 1; /* pengaturan lentur elemen di flexbox (tumbuh, susut, ukuran awal) */
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  max-width: 1440px; /* lebar maksimalnya dibatasi sampai segini */
+  width: 100%; /* lebar elemennya diatur segini */
+  margin: 0 auto; /* jarak luar elemen, ruang kosong di sekelilingnya */
+  padding: 40px 6% 80px 6%; /* ruang di dalam elemen antara tepi sama isinya */
 }
 
 .hero-container {
-  display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  align-items: center;
-  gap: 40px;
-  width: 100%;
+  display: grid; /* pakai grid, isi di dalamnya tersusun dalam baris dan kolom */
+  grid-template-columns: 1.25fr 0.75fr; /* pembagian kolom grid-nya diatur di sini */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  gap: 40px; /* jarak antar elemen di dalamnya */
+  width: 100%; /* lebar elemennya */
 }
 
 /* Left Hero Content */
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  max-width: 640px;
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  flex-direction: column; /* isi flexbox disusun ke bawah (vertikal) */
+  align-items: flex-start; /* isi di dalamnya diratain ke awal (atas) secara vertikal */
+  gap: 24px; /* jarak antar elemen di dalamnya */
+  max-width: 640px; /* lebar maksimalnya dibatasi sampai segini */
 }
 
 /* Badge Pill */
 .hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 20px;
-  background: rgba(9, 20, 28, 0.75);
-  border: 1px solid var(--glass-border);
-  border-radius: 120px;
-  font-size: 0.86rem;
-  color: var(--cyan-light);
-  letter-spacing: 0.5px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 0 18px rgba(27, 228, 178, 0.12);
+  display: inline-flex; /* pakai flexbox tapi elemennya sendiri tampil sebaris */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  gap: 10px; /* jarak antar elemen di dalamnya */
+  padding: 8px 20px; /* jarak dalam elemen, ruang antara tepi dan isinya */
+  background: rgba(9, 20, 28, 0.75); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  border: 1px solid var(--glass-border); /* garis tepi elemennya diatur sekaligus (tebal, gaya, warna) */
+  border-radius: 120px; /* sudut elemennya dibikin melengkung segini */
+  font-size: 0.86rem; /* ukuran font-nya */
+  color: var(--cyan-light); /* ngatur warna teksnya */
+  letter-spacing: 0.5px; /* jarak antar hurufnya */
+  backdrop-filter: blur(10px); /* area di belakang elemen dibikin blur (efek kaca) */
+  -webkit-backdrop-filter: blur(10px); /* sama kayak backdrop-filter, versi buat browser webkit */
+  box-shadow: 0 0 18px rgba(27, 228, 178, 0.12); /* bayangan di sekeliling elemen biar kelihatan timbul */
 }
 
 .badge-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 100%;
-  background: var(--cyan-primary);
-  box-shadow: 0 0 8px var(--cyan-primary);
+  width: 8px; /* lebar elemennya diatur segini */
+  height: 8px; /* tinggi elemennya */
+  border-radius: 100%; /* sudut elemennya dibikin melengkung segini */
+  background: var(--cyan-primary); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  box-shadow: 0 0 8px var(--cyan-primary); /* bayangan di sekeliling elemen biar kelihatan timbul */
 }
 
 /* Hero Typography */
 .hero-title {
-  font-size: clamp(2.8rem, 5.2vw, 4.5rem);
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.5px;
-  color: #ffffff;
+  font-size: clamp(2.8rem, 5.2vw, 4.5rem); /* ukuran hurufnya */
+  font-weight: 600; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  line-height: 1.15; /* jarak antar baris teksnya */
+  letter-spacing: -0.5px; /* jarak antar hurufnya */
+  color: #ffffff; /* warna teksnya */
 }
 
 .hero-title .highlight {
-  color: var(--cyan-primary);
-  text-shadow: 0 0 28px rgba(27, 228, 178, 0.45);
+  color: var(--cyan-primary); /* warna teks elemen ini */
+  text-shadow: 0 0 28px rgba(27, 228, 178, 0.45); /* bayangan di teksnya biar kelihatan timbul/menyala */
 }
 
 .hero-title .serif-italic {
-  display: block;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.18em;
-  color: #f7fafc;
-  margin-top: 6px;
+  display: block; /* elemennya tampil sebagai blok, mengambil satu baris penuh */
+  font-family: "Cormorant Garamond", Georgia, serif; /* jenis huruf (font) yang dipakai */
+  font-style: italic; /* hurufnya dibikin miring */
+  font-weight: 400; /* ketebalan hurufnya, makin besar angkanya makin tebal */
+  font-size: 1.18em; /* besar kecilnya huruf diatur di sini */
+  color: #f7fafc; /* ngatur warna teksnya */
+  margin-top: 6px; /* jarak luar bagian atasnya */
 }
 
 .hero-description {
-  color: var(--text-dim);
-  font-size: 1.05rem;
-  line-height: 1.75;
+  color: var(--text-dim); /* warna teksnya */
+  font-size: 1.05rem; /* ukuran font-nya */
+  line-height: 1.75; /* jarak antar baris teksnya */
 }
 
 /* Social Footer Links */
 
 .social-label {
-  font-size: 0.9rem;
-  color: var(--text-dim);
+  font-size: 0.9rem; /* ukuran hurufnya */
+  color: var(--text-dim); /* warna teks elemen ini */
 }
 
 .social-icons {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  gap: 14px; /* jarak antar elemen di dalamnya */
 }
 
 .social-icon-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  color: var(--text-dim);
-  text-decoration: none;
-  transition: all 0.25s ease;
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  justify-content: center; /* isi di dalamnya diratain tengah secara horizontal */
+  width: 34px; /* lebar elemennya */
+  height: 34px; /* tinggi elemennya */
+  border-radius: 50%; /* sudut elemennya dibikin melengkung segini */
+  color: var(--text-dim); /* ngatur warna teksnya */
+  text-decoration: none; /* hiasan teks bawaan (kayak garis bawah link) dihilangkan */
+  transition: all 0.25s ease; /* perubahan nilainya dibikin bergerak halus, tidak patah-patah */
 }
 
 .social-icon-btn:hover {
-  color: var(--cyan-primary);
-  transform: translateY(-2px);
-  filter: drop-shadow(0 0 8px var(--cyan-primary));
+  color: var(--cyan-primary); /* warna teksnya */
+  transform: translateY(-2px); /* elemennya digeser ke atas/bawah dari posisi awalnya */
+  filter: drop-shadow(0 0 8px var(--cyan-primary)); /* efek filter visual buat elemennya (blur, saturasi, dan sejenisnya) */
 }
 
 @keyframes float-badge {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0); /* elemennya digeser ke atas/bawah dari posisi awalnya */
   }
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-12px); /* elemennya digeser ke atas/bawah dari posisi awalnya */
   }
 }
 
@@ -252,44 +252,44 @@ main {
    ========================================= */
 @media (max-width: 1024px) {
   .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
+    grid-template-columns: 1fr; /* pembagian kolom grid-nya diatur di sini */
+    text-align: center; /* teksnya diratain tengah */
   }
 
   .hero-content {
-    align-items: center;
-    max-width: 100%;
+    align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+    max-width: 100%; /* lebar maksimalnya dibatasi sampai segini */
   }
 
   .floating-stat-badge {
-    position: static;
-    display: inline-flex;
-    margin: 0 auto;
-    animation: none;
+    position: static; /* posisi normal mengikuti alur halaman */
+    display: inline-flex; /* pakai flexbox tapi elemennya sendiri tampil sebaris */
+    margin: 0 auto; /* ruang kosong di luar elemennya */
+    animation: none; /* animasi keyframes yang disebut di sini dijalankan */
   }
 
   .sparkle-icon {
-    display: none;
+    display: none; /* elemennya disembunyikan, tidak ditampilkan sama sekali */
   }
 }
 
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    gap: 18px;
-    padding: 20px;
+    flex-direction: column; /* isi flexbox disusun ke bawah (vertikal) */
+    gap: 18px; /* jarak antar elemen di dalamnya */
+    padding: 20px; /* ruang di dalam elemen antara tepi sama isinya */
   }
 
   .nav-capsule {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 8px 18px;
-    gap: 14px;
-    font-size: 0.85rem;
+    flex-wrap: wrap; /* isi flexbox boleh turun ke baris baru kalau tidak muat */
+    justify-content: center; /* isi di dalamnya diratain tengah secara horizontal */
+    padding: 8px 18px; /* jarak dalam elemen, ruang antara tepi dan isinya */
+    gap: 14px; /* jarak antar elemen di dalamnya */
+    font-size: 0.85rem; /* besar kecilnya huruf diatur di sini */
   }
 
   .hero-title {
-    font-size: 2.4rem;
+    font-size: 2.4rem; /* ukuran font-nya */
   }
 }
 
@@ -297,80 +297,80 @@ main {
    Footer Section
    ========================================= */
 .space-footer {
-  width: 100%;
+  width: 100%; /* lebar elemennya diatur segini */
   background: linear-gradient(
     to bottom,
     transparent,
     rgba(5, 10, 15, 0.75) 20%,
     rgba(5, 10, 15, 0.95) 100%
-  );
-  color: var(--text-dim);
-  position: relative;
-  z-index: 10;
-  margin-top: 20px;
+  ); /* background-nya diatur sekaligus di sini (warna, gambar, atau gradasi) */
+  color: var(--text-dim); /* warna teks elemen ini */
+  position: relative; /* posisinya normal tapi jadi patokan buat elemen di dalamnya */
+  z-index: 10; /* urutan tumpukannya, makin besar angkanya makin di depan */
+  margin-top: 20px; /* jarak luar bagian atasnya */
 }
 
 .footer-content {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 60px 6% 32px 6%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1440px; /* lebar maksimalnya dibatasi sampai segini */
+  margin: 0 auto; /* jarak luar elemen, ruang kosong di sekelilingnya */
+  padding: 60px 6% 32px 6%; /* ruang di dalam elemen antara tepi sama isinya */
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  flex-direction: column; /* isi flexbox disusun ke bawah (vertikal) */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
 }
 
 .footer-logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  display: flex; /* pakai flexbox, isi di dalamnya jadi gampang diatur sejajar */
+  align-items: center; /* isi di dalamnya diratain tengah secara vertikal */
+  margin-bottom: 20px; /* jarak luar bagian bawahnya */
 }
 
 .footer-logo .logo-text {
-  font-size: 1.6rem;
+  font-size: 1.6rem; /* ukuran hurufnya */
 }
 
 .footer-desc {
-  text-align: center;
-  max-width: 580px;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  text-align: center; /* teksnya diratain tengah */
+  max-width: 580px; /* lebar maksimalnya dibatasi sampai segini */
+  font-size: 0.95rem; /* besar kecilnya huruf diatur di sini */
+  line-height: 1.6; /* jarak antar baris teksnya */
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.08); /* garis tepi bagian atasnya saja */
+  width: 100%; /* lebar elemennya */
 }
 
 .footer-bottom-inner {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 24px 6%;
-  text-align: center;
-  font-size: 0.88rem;
+  max-width: 1440px; /* lebar maksimalnya dibatasi sampai segini */
+  margin: 0 auto; /* ruang kosong di luar elemennya */
+  padding: 24px 6%; /* jarak dalam elemen, ruang antara tepi dan isinya */
+  text-align: center; /* teksnya diratain tengah */
+  font-size: 0.88rem; /* ukuran font-nya */
 }
 
 .footer-bottom-inner a {
-  color: var(--cyan-primary);
-  text-decoration: none;
-  font-weight: 500;
+  color: var(--cyan-primary); /* ngatur warna teksnya */
+  text-decoration: none; /* hiasan teks bawaan (kayak garis bawah link) dihilangkan */
+  font-weight: 500; /* ketebalan hurufnya, makin besar angkanya makin tebal */
 }
 
 .footer-bottom-inner a:hover {
-  text-decoration: underline;
-  text-shadow: 0 0 10px var(--cyan-glow);
+  text-decoration: underline; /* hiasan teksnya (garis bawah dan sejenisnya) */
+  text-shadow: 0 0 10px var(--cyan-glow); /* bayangan di teksnya biar kelihatan timbul/menyala */
 }
 
 body.js-ready .hero-content {
-  animation: heroFadeUp 0.9s ease both;
+  animation: heroFadeUp 0.9s ease both; /* animasi keyframes yang disebut di sini dijalankan */
 }
 
 @keyframes heroFadeUp {
   from {
-    opacity: 0;
-    transform: translateY(24px);
+    opacity: 0; /* tingkat transparannya (1 berarti penuh, 0 berarti hilang) */
+    transform: translateY(24px); /* elemennya digeser ke atas/bawah dari posisi awalnya */
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* tingkat transparannya (1 berarti penuh, 0 berarti hilang) */
+    transform: translateY(0); /* elemennya digeser ke atas/bawah dari posisi awalnya */
   }
 }
